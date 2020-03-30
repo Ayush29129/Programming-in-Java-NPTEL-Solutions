@@ -1,14 +1,23 @@
-// Import the required packag
 import java.util.Scanner;
-import static java.lang.System.out;
-// main class Question is created
-public class Question41{
-  public static void main(String[] args) {
-	// Scanner object is created
-    Scanner scanner = new Scanner(System.in);
-     // Read String input using scanner class
-    String courseName = scanner.nextLine(); 
-     // Print the scanned String
-    out.println("Course: " + courseName); 
+
+interface Number {
+    int findSqr(int i);  // Returns the square of n
+}
+
+//Create a class A which implements the interface Number. class A implements Number
+class A implements Number{
+  public int findSqr(int i)
+  {
+  	return i*i;
   }
 }
+public class Question5_1{ 
+        public static void main (String[] args){ 
+	      A a = new A();   //Create an object of class A
+           // Read a number from the keyboard
+           Scanner sc = new Scanner(System.in);  
+           int i = sc.nextInt();
+           System.out.print(a.findSqr(i)); 
+    } 
+}
+
